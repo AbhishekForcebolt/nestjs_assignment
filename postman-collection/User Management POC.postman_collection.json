@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "123eddbb-335f-4614-88a8-20b9685c1866",
+		"name": "User Management POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34687805"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Insert User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"birthday\": \"2024-07-29T18:30:00.000Z\",\n    \"first_name\": \"Pardeep\",\n    \"last_name\": \"Saini\",\n    \"surname\": \"Singh\",\n    \"username\": \"novasdsbs1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Mock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/insert/mock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"insert",
+								"mock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/00586756-7e97-4000-ae39-d6cf44e6f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"00586756-7e97-4000-ae39-d6cf44e6f758"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/eeb4af0a-42be-4e40-ad14-0e2de268da53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"eeb4af0a-42be-4e40-ad14-0e2de268da53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"e2092ddd-4c75-4d65-8b0c-bfd4210ba5db\",\n    \"first_name\" :\"Pardeep\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Filter",
+			"item": [
+				{
+					"name": "Users Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1YWQ3OTY1LWY5MDEtNDM4Yy04MGUzLTBhYjMxYTdlZTQ2YiIsImlhdCI6MTcyMjI0OTg4NX0.80REKS9WDZnn-ihFbgp5-Y86fTyYNM_RHM0JoqPtwp0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users/search?max_age=35&username=novab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "max_age",
+									"value": "35"
+								},
+								{
+									"key": "min_age",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "novab"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Block",
+			"item": [
+				{
+					"name": "Block User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1YWQ3OTY1LWY5MDEtNDM4Yy04MGUzLTBhYjMxYTdlZTQ2YiIsImlhdCI6MTcyMjI0OTg4NX0.80REKS9WDZnn-ihFbgp5-Y86fTyYNM_RHM0JoqPtwp0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/block/user/00586756-7e97-4000-ae39-d6cf44e6f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"block",
+								"user",
+								"00586756-7e97-4000-ae39-d6cf44e6f758"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unblock User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ1YWQ3OTY1LWY5MDEtNDM4Yy04MGUzLTBhYjMxYTdlZTQ2YiIsImlhdCI6MTcyMjI0OTg4NX0.80REKS9WDZnn-ihFbgp5-Y86fTyYNM_RHM0JoqPtwp0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/un_block/user/00586756-7e97-4000-ae39-d6cf44e6f758",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"un_block",
+								"user",
+								"00586756-7e97-4000-ae39-d6cf44e6f758"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
